@@ -2,6 +2,8 @@ package org.example.model;
 
 import org.apache.commons.lang.StringUtils;
 
+import java.util.Locale;
+
 
 public class Employee {
 
@@ -12,8 +14,8 @@ public class Employee {
 
     public Employee(String firstName, String lastName, double salary, int department) {
 
-        this.firstName = StringUtils.capitalize(firstName);
-        this.lastName = StringUtils.capitalize(lastName);
+        this.firstName = StringUtils.capitalize(firstName.toLowerCase());
+        this.lastName = StringUtils.capitalize(lastName.toLowerCase());
         this.salary = salary;
         this.department = department;
 
